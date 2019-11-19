@@ -32,13 +32,13 @@
   3. _Αριθμός Memory Ranks per Channel_  
    [system.mem.ctrls0]  
    `ranks_per_channel=2`  
-   <br><br>
+   <br><br> 
 ### <pre><b> Ερώτημα 3)</b></pre>      
      
      ΠΕΡΙΓΡΑΦΗ  
      
    a) 
-   1. TimingCPU  
+   1. TimingSimpleCPU  
    <pre>
 final_tick                                   43143000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)  
 host_seconds                                     0.05                       # Real time elapsed on the host  
@@ -60,8 +60,11 @@ sim_ticks                                    36506000                       # Nu
   b)  
   <br><br>
   c)  
-  * Μειώνοντας την συχνότητα ρολογιού παρατηρώ ότι οι χρόνοι αυξάνονται ενώ ο αριθμός των ticks μειώνεται σε σχέση με το default clock
-  1. TimingCPU with --cpu-clock=100KHz  
+  * Μειώνοντας την συχνότητα ρολογιού παρατηρώ ότι οι χρόνοι αυξάνονται ενώ ο αριθμός των ticks μειώνεται σε σχέση με το default clock. Να σημειωθεί ότι με το default clock ο TimingSimpleCPU είχε χαμηλότερο χρόνο από τον MinorCPU  
+  * Αλλάζοντας τον τύπο μνήμης παρατηρώ ότι αυξάνεται ο αριθμός των ticks 
+
+  
+  1. TimingSimpleCPU with --cpu-clock=100KHz  
   <pre>
 final_tick                               369010000000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
 host_seconds                                     0.98                       # Real time elapsed on the host
@@ -81,7 +84,6 @@ sim_seconds                                  0.206330                       # Nu
 sim_ticks                                206330000000                       # Number of ticks simulated
 </pre> 
 
-* Αλλάζοντας τον τύπο μνήμης παρατηρώ ότι αυξάνεται ο αριθμός των ticks 
 3. TimingSimpleCPU with --mem-type=LPDDR2_S4_1066_1x32
 <pre>
 final_tick                                   51120000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
