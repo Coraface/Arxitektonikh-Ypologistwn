@@ -9,7 +9,7 @@
   3. _Συχνότητα λειτουργίας_  
     `<parses.add_argument("--cpu-freq",...)>` : By default βλέπω ότι τίθεται 4Ghz  
   4. _Αριθμός πυρήνων_  
-    `<parses.add_argument("--num-cores",...)>` : Bye default τίθεται 1 πυρήνας  
+    `parses.add_argument("--num-cores",...)` : By default τίθεται 1 πυρήνας  
   5. _Τύπος μνήμης_  
     `<parses.add_argument("--mem-type",...)>` : By default DDR3_1600_8x8  
   6. _Μέγεθος φυσικής μνήμης_  
