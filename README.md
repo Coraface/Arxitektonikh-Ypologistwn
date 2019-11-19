@@ -32,13 +32,15 @@
   3. _Αριθμός Memory Ranks per Channel_  
    [system.mem.ctrls0]  
    `ranks_per_channel=2`  
-   <br><br> 
+   <br><br>
 ### <pre><b> Ερώτημα 3)</b></pre>      
      
      ΠΕΡΙΓΡΑΦΗ  
-     
+     Το μοντέλο InOrder CPU σχεδιάστηκε για να παρέχει ένα γενικό πλαίσιο για την προσομοίωση αγωγών εντός τάξης 
+     με αυθαίρετη ISA και με αυθαίρετες περιγραφές αγωγών. Οι εντολές φορτώνονται, εκτελούνται και συμπληρώνονται 
+     σε παραγγελία που παράγεται από τον μεταγλωττιστή.
    a) 
-   1. TimingSimpleCPU  
+   1. TimingCPU  
    <pre>
 final_tick                                   43143000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)  
 host_seconds                                     0.05                       # Real time elapsed on the host  
@@ -57,14 +59,11 @@ sim_seconds                                  0.000037                       # Nu
 sim_ticks                                    36506000                       # Number of ticks simulated
    </pre>
    <br><br>
-  b)  
-  <br><br>
   c)  
-  * Μειώνοντας την συχνότητα ρολογιού παρατηρώ ότι οι χρόνοι αυξάνονται ενώ ο αριθμός των ticks μειώνεται σε σχέση με το default clock. Να σημειωθεί ότι με το default clock ο TimingSimpleCPU είχε χαμηλότερο χρόνο από τον MinorCPU  
+  * Μειώνοντας την συχνότητα ρολογιού παρατηρώ ότι οι χρόνοι αυξάνονται ενώ ο αριθμός των ticks μειώνεται σε σχέση με το default clock  
   * Αλλάζοντας τον τύπο μνήμης παρατηρώ ότι αυξάνεται ο αριθμός των ticks 
 
-  
-  1. TimingSimpleCPU with --cpu-clock=100KHz  
+  1. TimingCPU with --cpu-clock=100KHz  
   <pre>
 final_tick                               369010000000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
 host_seconds                                     0.98                       # Real time elapsed on the host
