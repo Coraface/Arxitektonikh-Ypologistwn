@@ -23,11 +23,11 @@
 Στο config.ini παρατηρώ  
   1. _Μέγεθος cache μνήμης και Μέγεθος φυσικής μνήμης_  
     [system]  
-   `cache_line_size = 64`
+   `cache_line_size = 64`  
    `mem_ranges=0:2147483647`  
   2. _Τύπος CPU και αριθμός Threads_  
    [system.cpu_cluster.cpus]  
-   `type=MinorCPU`
+   `type=MinorCPU`  
    `numThreads=1`  
   3. _Αριθμός Memory Ranks per Channel_  
    [system.mem.ctrls0]  
