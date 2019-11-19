@@ -1,6 +1,6 @@
 ## Εργασία 1
 
-### <b> Ερώτημα 1)</b>  
+### <pre><b> Ερώτημα 1)</b></pre>  
 Στην αρχή της κλάσης και στην main() παρατηρώ:  
   1. _Μέγεθος cache μνήμης_  
     `cache_line_size = 64` : Τίθεται fixed 64 bytes στην αρχή της κλάσης   
@@ -19,16 +19,82 @@
   8. _Αριθμός Memory Ranks per Channel_  
     `parses.add_argument("--mem-ranks",...)` : By default _None_
     <br><br>
-### <b> Ερώτημα 2)</b>  
+### <pre><b> Ερώτημα 2)</b></pre>    
 Στο config.ini παρατηρώ  
   1. _Μέγεθος cache μνήμης και Μέγεθος φυσικής μνήμης_  
     [system]  
    `cache_line_size = 64`
    `mem_ranges=0:2147483647`  
-  2. _Τύπος CPU και αριθμός Threads_
+  2. _Τύπος CPU και αριθμός Threads_  
    [system.cpu_cluster.cpus]  
    `type=MinorCPU`
    `numThreads=1`  
-  3. _Αριθμός Memory Ranks per Channel_
-   [system.mem.ctrls0]
-   `ranks_per_channel=2`
+  3. _Αριθμός Memory Ranks per Channel_  
+   [system.mem.ctrls0]  
+   `ranks_per_channel=2`  
+   <br><br>
+### <pre><b> Ερώτημα 3)</b></pre>      
+     
+     ΠΕΡΙΓΡΑΦΗ  
+     
+   a) 
+   1. TimingCPU  
+   <pre>
+final_tick                                   43143000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)  
+host_seconds                                     0.05                       # Real time elapsed on the host  
+host_tick_rate                              882572071                       # Simulator tick rate (ticks/s)  
+sim_freq                                 1000000000000                      # Frequency of simulated ticks  
+sim_seconds                                  0.000043                       # Number of seconds simulated  
+sim_ticks                                    43143000                       # Number of ticks simulated  
+   </pre>
+   2. MinorCPU  
+   <pre>
+final_tick                                   36506000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
+host_seconds                                     0.13                       # Real time elapsed on the host
+host_tick_rate                              277111912                       # Simulator tick rate (ticks/s)
+sim_freq                                 1000000000000                      # Frequency of simulated ticks
+sim_seconds                                  0.000037                       # Number of seconds simulated
+sim_ticks                                    36506000                       # Number of ticks simulated
+   </pre>
+   <br><br>
+  b)  
+  <br><br>
+  c) 1. TimingCPU with --cpu-clock=100KHz  
+  <pre>
+final_tick                               369010000000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
+host_seconds                                     0.98                       # Real time elapsed on the host
+host_tick_rate                           377605550311                       # Simulator tick rate (ticks/s)
+sim_freq                                 1000000000000                      # Frequency of simulated ticks
+sim_seconds                                  0.369010                       # Number of seconds simulated
+sim_ticks                                369010000000                       # Number of ticks simulated
+  </pre>
+  
+  2. MinorCPU with --cpu-clock=100KHz  
+  <pre>
+final_tick                               206330000000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
+host_seconds                                     0.67                       # Real time elapsed on the host
+host_tick_rate                           309016775835                       # Simulator tick rate (ticks/s)
+sim_freq                                 1000000000000                      # Frequency of simulated ticks
+sim_seconds                                  0.206330                       # Number of seconds simulated
+sim_ticks                                206330000000                       # Number of ticks simulated
+</pre> 
+
+3. TimingSimpleCPU with --mem-type=LPDDR2_S4_1066_1x32
+<pre>
+final_tick                                   51120000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
+host_seconds                                     0.07                       # Real time elapsed on the host
+host_tick_rate                              773261384                       # Simulator tick rate (ticks/s)
+sim_freq                                 1000000000000                      # Frequency of simulated ticks
+sim_seconds                                  0.000051                       # Number of seconds simulated
+sim_ticks                                    51120000                       # Number of ticks simulated
+</pre>  
+
+4. MinorCPU with --mem-type=HBM_1000_4H_1x64
+<pre>
+final_tick                                   42302000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
+host_seconds                                     0.13                       # Real time elapsed on the host
+host_tick_rate                              325940585                       # Simulator tick rate (ticks/s)
+sim_freq                                 1000000000000                      # Frequency of simulated ticks
+sim_seconds                                  0.000042                       # Number of seconds simulated
+sim_ticks                                    42302000                       # Number of ticks simulated
+</pre>
