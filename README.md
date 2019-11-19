@@ -63,7 +63,7 @@ sim_ticks                                    36506000                       # Nu
   * Μειώνοντας την συχνότητα ρολογιού παρατηρώ ότι οι χρόνοι αυξάνονται ενώ ο αριθμός των ticks μειώνεται σε σχέση με το default clock  
   * Αλλάζοντας τον τύπο μνήμης παρατηρώ ότι αυξάνεται ο αριθμός των ticks 
 
-  1. TimingCPU with --cpu-clock=100KHz  
+  3. TimingCPU with --cpu-clock=100KHz  
   <pre>
 final_tick                               369010000000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
 host_seconds                                     0.98                       # Real time elapsed on the host
@@ -73,7 +73,7 @@ sim_seconds                                  0.369010                       # Nu
 sim_ticks                                369010000000                       # Number of ticks simulated
   </pre>
   
-  2. MinorCPU with --cpu-clock=100KHz  
+  4. MinorCPU with --cpu-clock=100KHz  
   <pre>
 final_tick                               206330000000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
 host_seconds                                     0.67                       # Real time elapsed on the host
@@ -83,7 +83,7 @@ sim_seconds                                  0.206330                       # Nu
 sim_ticks                                206330000000                       # Number of ticks simulated
 </pre> 
 
-3. TimingSimpleCPU with --mem-type=LPDDR2_S4_1066_1x32
+5. TimingSimpleCPU with --mem-type=LPDDR2_S4_1066_1x32
 <pre>
 final_tick                                   51120000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
 host_seconds                                     0.07                       # Real time elapsed on the host
@@ -93,7 +93,7 @@ sim_seconds                                  0.000051                       # Nu
 sim_ticks                                    51120000                       # Number of ticks simulated
 </pre>  
 
-4. MinorCPU with --mem-type=HBM_1000_4H_1x64
+6. MinorCPU with --mem-type=HBM_1000_4H_1x64
 <pre>
 final_tick                                   42302000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
 host_seconds                                     0.13                       # Real time elapsed on the host
