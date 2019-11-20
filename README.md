@@ -3,35 +3,52 @@
 ### <pre><b> Ερώτημα 1)</b></pre>  
 Στην αρχή της κλάσης και στην main() παρατηρώ:  
   1. _Μέγεθος cache μνήμης_  
-    `cache_line_size = 64` : Τίθεται fixed 64 bytes στην αρχή της κλάσης   
-  2. _Τύπος CPU_  
+    `cache_line_size = 64` : Τίθεται fixed 64 bytes στην αρχή της κλάσης  
+  2. _Ηλεκτρική τάση για τα δίαφορα κομμάτια του συστήματος_  
+	  `self.voltage_domain = VoltageDomain(voltage="3.3V")` : Τίθεται by default στα 3.3 volt.
+  3. _Συχότητα λειτουργείας για τα διάφορα κομμάτια του συστήματος_
+	`self.clk_domain = SrcClockDomain(clock="1GHz"...)` : Τίθεται by default στο 1GHz.
+  4. _Τύπος CPU_  
     `parses.add_argument("--cpu",...)` : Βy default βλέπω ότι τίθεται atomic, εκτός αν περάσω κάποιον άλλο τύπο μέσω --cpu  
-  3. _Συχνότητα λειτουργίας_  
+  5. _Συχνότητα λειτουργίας_  
     `parses.add_argument("--cpu-freq",...)` : By default βλέπω ότι τίθεται _4Ghz_  
-  4. _Αριθμός πυρήνων_  
+  6. _Αριθμός πυρήνων_  
     `parses.add_argument("--num-cores",...)` : By default τίθεται _1_ πυρήνας  
-  5. _Τύπος μνήμης_  
+  7. _Τύπος μνήμης_  
     `parses.add_argument("--mem-type",...)` : By default _DDR3_1600_8x8_  
-  6. _Μέγεθος φυσικής μνήμης_  
+  8. _Μέγεθος φυσικής μνήμης_  
     `parses.add_argument("--mem-size",...)` : By default _2GB_  
-  7. _Αριθμός Memory Channels_  
+  9. _Αριθμός Memory Channels_  
     `parses.add_argument("--mem-channels",...)` : By default _2_  
-  8. _Αριθμός Memory Ranks per Channel_  
-    `parses.add_argument("--mem-ranks",...)` : By default _None_
+  10. _Αριθμός Memory Ranks per Channel_  
+    `parses.add_argument("--mem-ranks",...)` : By default _None_  
+  11._Ορισμός χρήσης συστήματος_
+	  `root = Root(full_system=False)` : By default επιλέγεται ο τύπος "Sys call emulation mode" έναντι του "Full System emulation mode"
+    <br><br>
+    
     <br><br>
 ### <pre><b> Ερώτημα 2)</b></pre>    
-Στο config.ini παρατηρώ  
-  1. _Μέγεθος cache μνήμης και Μέγεθος φυσικής μνήμης_  
+Στο config.ini παρατηρώ και επαληθέυω:  
+  1. _Ορισμός χρήσης συστήματος_  
+	[root]  
+   `full_system=false`  
+  2. _Μέγεθος cache μνήμης και Μέγεθος φυσικής μνήμης_   
     [system]  
    `cache_line_size = 64`  
-   `mem_ranges=0:2147483647`  
-  2. _Τύπος CPU και αριθμός Threads_  
-   [system.cpu_cluster.cpus]  
+   `mem_ranges=0:2147483647`   
+  3. _Τύπος CPU και αριθμός Threads_    
+    [system.cpu_cluster.cpus]  
    `type=MinorCPU`  
    `numThreads=1`  
-  3. _Αριθμός Memory Ranks per Channel_  
-   [system.mem.ctrls0]  
+  4. _Αριθμός Memory Ranks per Channel_  
+    [system.mem.ctrls0]  
    `ranks_per_channel=2`  
+  5. _Συχότητα λειτουργείας για τα διάφορα κομμάτια του συστήματος_  
+	[system.clk_domain]  
+   `clock=1000`  
+  6. __Ηλεκτρική τάση για τα δίαφορα κομμάτια του συστήματος_  
+	[system.voltage_domain]  
+   `voltage=3.3` 
    <br><br>
 ### <pre><b> Ερώτημα 3)</b></pre>      
      
@@ -62,7 +79,7 @@ sim_ticks                                    36506000                       # Nu
    </pre>
    <br><br>
   c)  
-  * Μειώνοντας την συχνότητα ρολογιού παρατηρώ ότι οι χρόνοι αυξάνονται, ενώ ο αριθμός των ticks μειώνεται, σε σχέση με το default clock. Αξίζει να σημειωθεί ότι με default clock, το TimingSimpleCPU έχει μικρότερο host_seconds από το MinorCPU, σε αντίθεση τα 100KHz.
+  * Μειώνοντας την συχνότητα ρολογιού παρατηρώ ότι οι χρόνοι αυξάνονται, ενώ ο αριθμός των ticks μειώνεται, σε σχέση με το default clock. Αξίζει να σημειωθεί ότι με default clock, το TimingSimpleCPU έχει μικρότερο host_seconds από το MinorCPU, σε αντίθεση με την περίπτωση των 100KHz.
   * Αλλάζοντας τον τύπο μνήμης παρατηρώ ότι αυξάνεται ο αριθμός των ticks 
 
   3. TimingCPU with --cpu-clock=100KHz  
