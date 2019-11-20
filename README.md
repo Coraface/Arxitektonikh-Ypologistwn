@@ -102,7 +102,7 @@ sim_seconds                                  0.206330                       # Nu
 sim_ticks                                206330000000                       # Number of ticks simulated
 </pre> 
 
-5. TimingSimpleCPU with --mem-type=LPDDR2_S4_1066_1x32
+5. TimingSimpleCPU with --mem-type=LPDDR2_S4_1066_1x32 (Χρησιμοποιήσαμε διαφορετικό από το MinorCPU, ώστε να παρατηρηθεί μεγαλύτερη διαφορά σε σχέση με το default mem-type)
 <pre>
 final_tick                                   51120000                       # Number of ticks from beginning of simulation (restored from checkpoints and never reset)
 host_seconds                                     0.07                       # Real time elapsed on the host
