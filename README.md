@@ -109,7 +109,8 @@ sim_seconds                                  0.000037                       # Nu
 sim_ticks                                    36506000                       # Number of ticks simulated
    </pre>
    
-  b)  Kαι ο MinorCPU και ο TimingSimpleCPU αποτελούν μοντέλα In-order CPUs για αυτο βγάζουν παρόμοια αποτελέσματα ως προν τον χρόνο εκτέλεσης
+  b)  
+  Kαι ο MinorCPU και ο TimingSimpleCPU αποτελούν μοντέλα In-order CPUs για αυτο βγάζουν παρόμοια αποτελέσματα ως προν τον χρόνο εκτέλεσης
   
   c)  
   
