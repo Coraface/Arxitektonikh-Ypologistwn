@@ -104,6 +104,7 @@ sim_ticks                                    36506000                       # Nu
    <br><br>
 b) * Μειώνοντας την συχνότητα ρολογιού παρατηρώ ότι οι χρόνοι αυξάνονται, σε σχέση με το default clock. Αξίζει να σημειωθεί ότι με default clock, το TimingSimpleCPU έχει μικρότερο host_seconds από το MinorCPU, σε αντίθεση με την περίπτωση των 100KHz.  
   * Αλλάζοντας τον τύπο μνήμης παρατηρώ ότι αυξάνεται ο αριθμός των ticks.  
+  <br><br>
 c)  
   3. TimingCPU with --cpu-clock=100KHz  
   <pre>
