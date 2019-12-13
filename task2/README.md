@@ -1,7 +1,7 @@
 ## Εργασία 2 - Φοιτητές: Χωραφάς Χρήστος(8718)/Φάββας Αντώνης(8675), Ομάδα 33
 
-### <pre><b> Βήμα 1)</b>  
-<b>Ερώτημα 1</b></pre>
+### <pre><b> Βήμα 1)</b></pre>  
+#### <b>Ερώτημα 1</b>  
 _Benchmark 401_:  
   1. _`i_cache_size : 32768`_  
   2. _`i_cache_assoc : 2`_  
@@ -54,7 +54,7 @@ _Benchmark 470_:
  <pre> Παρατήρηση: όλα είναι ίδια.</pre>
  <br><br>
     
-<pre><b>Ερώτημα 1</b></pre>  
+#### <pre><b>Ερώτημα 2</b></pre>  
 _Benchmark 401_:  
   1. _`sim_seconds : 0.082631`_  
   2. _`CPI : 1.652621`_  
@@ -95,14 +95,14 @@ _Benchmark 470_:
   5. _`l2_misses : 0.999940`_  
     
    <br><br>
-<pre><b> Ερώτημα 3)</b></pre>  
+#### <pre><b> Ερώτημα 3)</b></pre>  
 
 Για όλα τα benchmarks ισχύει:  
   1. _`--cpu-clock=2GHz : system.clock = 1000`_  
   2. _`--cpu-clock=2GHz : system.cpu.clock = 500`_ 
   3. _`--cpu-clock=1GHz : system.clock = 1000`_  
   4. _`--cpu-clock=1GHz : system.cpu.clock = 1000`_
-     
+     <br><br>
      
 ### <pre><b> Βήμα 2)</b>  
 <b>Ερώτημα 1</b></pre>
