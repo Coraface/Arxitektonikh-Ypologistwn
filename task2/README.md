@@ -16,7 +16,7 @@
 
    
    <br><br> 
-<pre><b>Ερώτημα 1</b></pre>  <br>
+<pre><b>Ερώτημα 2</b></pre>  <br>
 _Benchmark 401_:  
   1. _`sim_seconds : 0.082631`_  
   2. _`CPI : 1.652621`_  
@@ -64,7 +64,7 @@ _Benchmark 470_:
     (μικρότερο) χρόνο προσομοίωσης.
     
    <br><br>
-<pre><b>Ερώτημα 1</b></pre>  <br>  
+<pre><b>Ερώτημα 3</b></pre>  <br>  
 
 Για όλα τα benchmarks ισχύει:  
   1. _`--cpu-clock=2GHz : system.clock = 1000`_  
@@ -100,7 +100,8 @@ _Benchmark 470_:
 Σαν εργασία ήταν πολύ ενδιαφέρουσα. Ήρθαμε σε επαφή με πιο πρακτικά πράγματα, εργαστήκαμε στο terminal (κάτι που μας αρέσει) και ψάξαμε πληροφορίες για το πως να αλλάξουμε παραμέτρους στα commands. Αυτό από μόνο του σου δίνει μια αίσθηση ικανοποίησης όταν τελικά τα πράγματα τρέχουν όπως θες. Μάθαμε αρκετά για τις προσομοιώσεις, τους επεξεργαστές και τις μνήμες, ακόμα και για την ωραιοποίηση του README χρησιμοποιώντας Markdown. Συναντήσαμε ένα μικρό πρόβλημα με το ανέβασμα των αρχείων, εφόσον μετά είδαμε ότι χρειάζονται όλες οι μετρήσεις και έπρεπε να ξανατρέξουμε τις αντίστοιχες εντολές, όπως και με το γεγονός ότι δεν υπήρχαν αρκετές πληροφορίες στο ίντερνετ για InOrder Cpu. Εν ολίγοις ήταν μια ευχάριστη, όχι πολύ δύσκολη εργασία που κάλυπτε αρκετά πράγματα.
 
       
-<b>_Βιβλιογραφία_<b>:  https://cirosantilli.com/linux-kernel-module-cheat/?fbclid=IwAR3h1ny5hRoVUIGP1vtOsUAzqXYd69sHBAopwuveHZtTSbd_MFp0B4Nmp8c#gem5-cpu-types  
+<b>_Βιβλιογραφία_<b>:  https://en.wikipedia.org/wiki/CPU_cache  
+  https://cirosantilli.com/linux-kernel-module-cheat/?fbclid=IwAR3h1ny5hRoVUIGP1vtOsUAzqXYd69sHBAopwuveHZtTSbd_MFp0B4Nmp8c#gem5-cpu-types  
 http://gem5.org/InOrder  
 http://www.m5sim.org/SimpleCPU#BaseSimpleCPU  
 http://www.gem5.org/docs/html/minor.html
