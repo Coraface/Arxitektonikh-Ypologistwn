@@ -1,8 +1,9 @@
 ## Εργασία 2 - Φοιτητές: Χωραφάς Χρήστος(8718)/Φάββας Αντώνης(8675), Ομάδα 33
 
 ### <pre><b> Βήμα 1)</b></pre>  
-#### <b>Ερώτημα 1</b>  
-_Benchmark 401_:  
+#### <b>Ερώτημα 1</b>  <br>
+ <pre> Παρατήρηση: όλα είναι ίδια.</pre>  
+
   1. _`i_cache_size : 32768`_  
   2. _`i_cache_assoc : 2`_  
   3. _`d_cache_size : 65596`_  
@@ -11,48 +12,6 @@ _Benchmark 401_:
   6. _`l2_assoc : 8`_    
   7. _`cache_line_size : 64`_  
     <br><br>
-    
-_Benchmark 429_:  
-  1. _`i_cache_size : 32768`_  
-  2. _`i_cache_assoc : 2`_  
-  3. _`d_cache_size : 65536`_  
-  4. _`d_cache_assoc : 2`_  
-  5. _`l2_size : 2097152`_    
-  6. _`l2_assoc : 8`_    
-  7. _`cache_line_size : 64`_  
-    <br>
-    
-_Benchmark 456_:  
-  1. _`i_cache_size : 32768`_  
-  2. _`i_cache_assoc : 2`_  
-  3. _`d_cache_size : 65596`_  
-  4. _`d_cache_assoc : 2`_  
-  5. _`l2_size : 2097152`_    
-  6. _`l2_assoc : 8`_    
-  7. _`cache_line_size : 64`_  
-    <br>
-    
-_Benchmark 458_:  
-  1. _`i_cache_size : 32768`_  
-  2. _`i_cache_assoc : 2`_  
-  3. _`d_cache_size : 65596`_  
-  4. _`d_cache_assoc : 2`_  
-  5. _`l2_size : 2097152`_    
-  6. _`l2_assoc : 8`_    
-  7. _`cache_line_size : 64`_  
-    <br>
-    
-_Benchmark 470_:  
-  1. _`i_cache_size : 32768`_  
-  2. _`i_cache_assoc : 2`_  
-  3. _`d_cache_size : 65596`_  
-  4. _`d_cache_assoc : 2`_  
-  5. _`l2_size : 2097152`_    
-  6. _`l2_assoc : 8`_    
-  7. _`cache_line_size : 64`_  
-    <br>
- <pre> Παρατήρηση: όλα είναι ίδια.</pre>
- <br><br>
     
 #### <pre><b>Ερώτημα 2</b></pre>  
 _Benchmark 401_:  
