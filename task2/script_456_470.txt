@@ -1,0 +1,95 @@
+#!/bin/bash
+
+l1_i_size=(2kB 4kB 8kB 16kB 32kB 64kB 128kB 256kB)
+l1_d_size=(2kB 4kB 8kB 16kB 32kB 64kB 128kB 256kB)
+l1_i_assoc=(1 2 4 8 16)
+l1_d_assoc=(1 2 4 8 16)
+l2_size=(2kB 4kB 8kB 16kB 32kB 64kB 128kB 256kB 512kB 1024kB 2048kB 4096kB)
+l2_assoc=(1 2 4 8 16)
+cache_line=(32 64 128 256 512 1024)
+I=100000000
+
+cd /home/antonis/Desktop/gem_5
+ls
+
+for i in ${l1_i_size[@]}
+do
+	./build/ARM/gem5.opt -d 456/l1_i_size/$i configs/example/se.py --cpu-type=MinorCPU --caches --l2cache -c benchmarks/456.hmmer/src/spechmmer -o "--fixed 0 --mean 325 --num 45000 --sd 200 --seed 0 benchmarks/456.hmmer/data/bombesin.hmm" -I $I --l1i_size=$i
+done
+
+for i in ${l1_d_size[@]}
+do
+	./build/ARM/gem5.opt -d 456/l1_d_size/$i configs/example/se.py --cpu-type=MinorCPU --caches --l2cache -c benchmarks/456.hmmer/src/spechmmer -o "--fixed 0 --mean 325 --num 45000 --sd 200 --seed 0 benchmarks/456.hmmer/data/bombesin.hmm" -I $I --l1d_size=$i
+done
+
+for i in ${l1_i_assoc[@]}
+do
+	./build/ARM/gem5.opt -d 456/l1_i_assoc/$i configs/example/se.py --cpu-type=MinorCPU --caches --l2cache -c benchmarks/456.hmmer/src/spechmmer -o "--fixed 0 --mean 325 --num 45000 --sd 200 --seed 0 benchmarks/456.hmmer/data/bombesin.hmm" -I $I --l1i_assoc=$i
+done
+
+for i in ${l1_d_assoc[@]}
+do
+	./build/ARM/gem5.opt -d 456/l1_d_assoc/$i configs/example/se.py --cpu-type=MinorCPU --caches --l2cache -c benchmarks/456.hmmer/src/spechmmer -o "--fixed 0 --mean 325 --num 45000 --sd 200 --seed 0 benchmarks/456.hmmer/data/bombesin.hmm" -I $I --l1d_assoc=$i
+done
+
+for i in ${l2_size[@]}
+do
+	./build/ARM/gem5.opt -d 456/l2_size/$i configs/example/se.py --cpu-type=MinorCPU --caches --l2cache -c benchmarks/456.hmmer/src/spechmmer -o "--fixed 0 --mean 325 --num 45000 --sd 200 --seed 0 benchmarks/456.hmmer/data/bombesin.hmm" -I $I --l2_size=$i
+done
+
+for i in ${l2_assoc[@]}
+do
+	./build/ARM/gem5.opt -d 456/l2_assoc/$i configs/example/se.py --cpu-type=MinorCPU --caches --l2cache -c benchmarks/456.hmmer/src/spechmmer -o "--fixed 0 --mean 325 --num 45000 --sd 200 --seed 0 benchmarks/456.hmmer/data/bombesin.hmm" -I $I --l2_assoc=$i
+done
+
+for i in ${cache_line[@]}
+do
+	./build/ARM/gem5.opt -d 456/cache_line/$i configs/example/se.py --cpu-type=MinorCPU --caches --l2cache -c benchmarks/456.hmmer/src/spechmmer -o "--fixed 0 --mean 325 --num 45000 --sd 200 --seed 0 benchmarks/456.hmmer/data/bombesin.hmm" -I $I --cacheline=$i
+done
+
+
+
+
+
+
+
+
+
+for i in ${l1_i_size[@]}
+do
+	./build/ARM/gem5.opt -d 470/l1_i_size/$i configs/example/se.py --cpu-type=MinorCPU --caches --l2cache -c benchmarks/470.lbm/src/speclibm -o "20 benchmarks/470.lbm/data/lbm.in 0 1 benchmarks/470.lbm/data/100_100_130_cf_a.of" -I $I --l1i_size=$i
+done
+
+for i in ${l1_d_size[@]}
+do
+	./build/ARM/gem5.opt -d 470/l1_d_size/$i configs/example/se.py --cpu-type=MinorCPU --caches --l2cache -c benchmarks/470.lbm/src/speclibm -o "20 benchmarks/470.lbm/data/lbm.in 0 1 benchmarks/470.lbm/data/100_100_130_cf_a.of" -I $I --l1d_size=$i
+done
+
+for i in ${l1_i_assoc[@]}
+do
+	./build/ARM/gem5.opt -d 470/l1_i_assoc/$i configs/example/se.py --cpu-type=MinorCPU --caches --l2cache -c benchmarks/470.lbm/src/speclibm -o "20 benchmarks/470.lbm/data/lbm.in 0 1 benchmarks/470.lbm/data/100_100_130_cf_a.of" -I $I --l1i_assoc=$i
+done
+
+for i in ${l1_d_assoc[@]}
+do
+	./build/ARM/gem5.opt -d 470/l1_d_assoc/$i configs/example/se.py --cpu-type=MinorCPU --caches --l2cache -c benchmarks/470.lbm/src/speclibm -o "20 benchmarks/470.lbm/data/lbm.in 0 1 benchmarks/470.lbm/data/100_100_130_cf_a.of" -I $I --l1d_assoc=$i
+done
+
+for i in ${l2_size[@]}
+do
+	./build/ARM/gem5.opt -d 470/l2_size/$i configs/example/se.py --cpu-type=MinorCPU --caches --l2cache -c benchmarks/470.lbm/src/speclibm -o "20 benchmarks/470.lbm/data/lbm.in 0 1 benchmarks/470.lbm/data/100_100_130_cf_a.of" -I $I --l2_size=$i
+done
+
+for i in ${l2_assoc[@]}
+do
+	./build/ARM/gem5.opt -d 470/l2_assoc/$i configs/example/se.py --cpu-type=MinorCPU --caches --l2cache -c benchmarks/470.lbm/src/speclibm -o "20 benchmarks/470.lbm/data/lbm.in 0 1 benchmarks/470.lbm/data/100_100_130_cf_a.of" -I $I --l2_assoc=$i
+done
+
+for i in ${cache_line[@]}
+do
+	./build/ARM/gem5.opt -d 470/cache_line/$i configs/example/se.py --cpu-type=MinorCPU --caches --l2cache -c benchmarks/470.lbm/src/speclibm -o "20 benchmarks/470.lbm/data/lbm.in 0 1 benchmarks/470.lbm/data/100_100_130_cf_a.of" -I $I --cacheline=$i
+done
+
+
+
+
