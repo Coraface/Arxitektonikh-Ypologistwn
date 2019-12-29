@@ -64,7 +64,10 @@
 Σαν εργασία ήταν πολύ ενδιαφέρουσα. Είδαμε πως δουλεύουν οι μνήμες cache, l1 και l2 και κάποιες άλλες παράμετροι όπως το associativity και ήρθαμε σε μια πιο στενή επαφή με τα benchmarks και το πως αυτές οι παράμετροι επηρεάζουν την απόδοση τους (CPI). Ένα downside ήταν οι μεγάλοι χρόνοι που απαιτούνταν για την εκτέλεση των προσομοιώσεων, ειδικά σε Virtual machine (στον έναν υπολογιστή μας πήρε σχεδόν μια μέρα). Ήρθαμε σε επαφή με πιο πρακτικά πράγματα, πειραματιστήκαμε με διάφορες τιμές και combos, εργαστήκαμε στο terminal (κάτι που μας αρέσει) και ψάξαμε πληροφορίες για το πως λειτουργούν αυτές οι παράμετροι σε ένα πραγματικό σύστημα. Αυτό από μόνο του σου δίνει μια αίσθηση ικανοποίησης όταν τελικά τα πράγματα τρέχουν όπως θες. Επεκτείναμε τις γνώσεις μας σχετικά με τις προσομοιώσεις, τους επεξεργαστές και τις μνήμες, ακόμα και για την ωραιοποίηση του README! Βέβαια το πρόβλημα με το ανέβασμα των αρχείων στο github επιμένει, ειδικά τώρα που φτιάξαμε και πολλους φακέλους. Εν ολίγοις ήταν μια ευχάριστη, κατανοητή εργασία, που προσφερόταν για πολύ πειραματισμό, αλλά ταυτόχρονα ήταν πολύ χρονοβόρα και επίπονη για το σύστημα.
 
       
-<b>_Βιβλιογραφία_<b>:  https://en.wikipedia.org/wiki/CPU_cache  
+<b>_Βιβλιογραφία_<b>:  https://en.wikipedia.org/wiki/CPU_power_dissipation  
+https://www.hpl.hp.com/research/mcpat/micro09.pdf  
+https://www.sciencedirect.com/topics/computer-science/static-power  
+ https://en.wikipedia.org/wiki/CPU_cache  
   https://cirosantilli.com/linux-kernel-module-cheat/?fbclid=IwAR3h1ny5hRoVUIGP1vtOsUAzqXYd69sHBAopwuveHZtTSbd_MFp0B4Nmp8c#gem5-cpu-types  
 http://gem5.org/InOrder  
 http://www.m5sim.org/SimpleCPU#BaseSimpleCPU  
