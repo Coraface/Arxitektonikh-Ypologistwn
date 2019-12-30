@@ -100,6 +100,12 @@ EEff(Xeon) = 40x/72.91 => EEff(Xeon) = 0.5486x. Όπως είναι φανερό
                        print_energy.py [options] mcpat_output_file gem5_stats_file
 παίρνουμε το energy απο το McPAT output.</pre>
 
+<br><br>
+
+<pre><b>Ερώτημα 2</b></pre>  <br>
+<pre> Ήταν αδύνατο να τρέξουμε για όλα τα benchmarks, για αυτό τρέξαμε και πήραμε γραφήματα μόνο για το 401 για όλες
+τις παραμέτρους και είδαμε την επίδρασή τους στο area και στο Peak Power (αθροιστικά των core και l2).</pre>
+
 
 <br><br><br>
 
